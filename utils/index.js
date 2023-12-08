@@ -1,5 +1,9 @@
-export { default as debounce } from './debounce';
-export { default as capsFirst } from './capsFirst';
-export { default as percentage } from './percentage';
-export { default as isInt } from './isInt';
-export { default as isFloat } from './isFloat';
+export { default as capsFirst} from "./capsFirst"; 
+export { default as copyToClipboard} from "./copyToClipboard"; 
+export { default as debounce} from "./debounce"; 
+export { default as getSelectedText} from "./getSelectedText"; 
+export { default as index} from "./index"; 
+export { default as isFloat} from "./isFloat"; 
+export { default as isInt} from "./isInt"; 
+export { default as percentage} from "./percentage"; 
+export { default as shuffleArray} from "./shuffleArray"; 
