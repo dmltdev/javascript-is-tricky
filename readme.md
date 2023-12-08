@@ -9,4 +9,6 @@
 ### Utils
 
 When adding new utils, they should be manually added to the list of exports in index.js.
-To do so, simply run `node generateUtilExports.js` to ensure that all utils are listed here.
+To do so, simply run `npm utils` to ensure that all utils are listed here.
+
+Personal note: add JSDoc for all utils!

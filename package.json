@@ -3,16 +3,19 @@
   "description": "* [Can (a == 1 && a == 2 && a == 3) ever evaluate to true?](https://github.com/dmltdev/javascript-is-tricky/blob/main/a1a2a3_true.js)",
   "version": "1.0.0",
   "main": "a1a2a3_true.js",
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "utils": "node generateExports.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jsdom": "^22.1.0",
-    "prettier": "^3.1.0",
     "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "jsdoc": "^4.0.2",
+    "jsdom": "^23.0.1",
+    "prettier": "^3.1.0"
   }
 }
