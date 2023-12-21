@@ -3,6 +3,7 @@
   "description": "* [Can (a == 1 && a == 2 && a == 3) ever evaluate to true?](https://github.com/dmltdev/javascript-is-tricky/blob/main/a1a2a3_true.js)",
   "version": "1.0.0",
   "main": "a1a2a3_true.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "utils": "node generateExports.js"
