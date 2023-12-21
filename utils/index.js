@@ -4,6 +4,7 @@ export { default as copyToClipboard} from "./copyToClipboard";
 export { default as dayDiff} from "./dayDiff"; 
 export { default as dayInYear} from "./dayInYear"; 
 export { default as debounce} from "./debounce"; 
+export { default as flat} from "./flat"; 
 export { default as generateRandomString} from "./generateRandomString"; 
 export { default as getSelectedText} from "./getSelectedText"; 
 export { default as hexToRgba} from "./hexToRgba"; 
