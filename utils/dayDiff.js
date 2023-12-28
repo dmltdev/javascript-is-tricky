@@ -1,6 +1,5 @@
 /**
  * Caulciates the day difference between two dates
- * @date 12/8/2023 - 9:41:17 AM
  *
  * @export
  * @param {Date} day1 - input date 1
