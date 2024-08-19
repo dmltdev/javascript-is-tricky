@@ -4,6 +4,13 @@ function toRad(value) {
   return (value * Math.PI) / 180;
 }
 
+function haversineFormula(dLat, dLon, lat1, lat2) {
+  return (
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.sin(dLon / 2) * Math.sin(dLon / 2) * Math.cos(lat1) * Math.cos(lat2)
+  );
+}
+
 // Returns the distance in kilometers between two coordinates
 export default function calculateDistance(lat1, lng1, lat2, lng2) {
   const R = 6371;
@@ -12,9 +19,7 @@ export default function calculateDistance(lat1, lng1, lat2, lng2) {
   const l1 = toRad(lat1);
   const l2 = toRad(lat2);
 
-  const a =
-    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-    Math.sin(dLon / 2) * Math.sin(dLon / 2) * Math.cos(l1) * Math.cos(l2);
+  const a = haversineFormula(dLat, dLon, lat1Rad, lat2Rad);
   const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
   const d = R * c;
   return d;

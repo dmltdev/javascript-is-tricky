@@ -6,7 +6,6 @@
  * @param {number} [capacity=10]
  * @returns {(...args: {}) => any}
  */
-
 export default function memoize(fn, capacity = 10) {
   const cache = new Map();
 
@@ -17,13 +16,16 @@ export default function memoize(fn, capacity = 10) {
       const value = cache.get(key);
       cache.delete(key);
       cache.set(key, value);
+      console.log(`Cache hit for key: ${key}`);
       return value;
     }
 
     const result = fn.apply(null, args);
+    console.log(`Cache miss for key: ${key}`);
 
     if (cache.size === capacity) {
       const lruKey = cache.keys().next().value;
+      console.log(`Cache full. Evicting least recently used key: ${lruKey}`);
       cache.delete(lruKey);
     }
 
@@ -32,16 +34,3 @@ export default function memoize(fn, capacity = 10) {
   };
 }
 
-// simple example
-import averageNumber from '../averageNumber.js';
-const memoizedAverage = memoize(averageNumber);
-
-// New input
-console.time();
-memoizedAverage(1, 2, 3);
-console.timeEnd();
-
-// Same input received from the cache
-console.time();
-memoizedAverage(1, 2, 3);
-console.timeEnd();
